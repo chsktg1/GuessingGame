@@ -1,7 +1,5 @@
 import {Component} from 'react'
 
-import {Back} from './styledComponents'
-
 import RenderOptions from '../RenderOptions'
 
 import TabList from '../TabList'
@@ -285,7 +283,7 @@ class MainPage extends Component {
     const data = imagesList.filter(e => e.category === activeTab)
 
     return (
-      <Back>
+      <div className="back">
         <img src={srcGuess} style={{width: '20vw'}} alt="match" />
         <ul>
           {tabsList.map(e => (
@@ -301,7 +299,7 @@ class MainPage extends Component {
             <RenderOptions e={e} key={e.id} sender={this.sender} />
           ))}
         </ul>
-      </Back>
+      </div>
     )
   }
 }
